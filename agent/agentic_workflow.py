@@ -48,4 +48,4 @@ class GraphBuilder():
         return self.graph
     
     def __call__(self):
-        return self.build_graph
+        return self.build_graph()
