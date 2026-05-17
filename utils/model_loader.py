@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 class ConfigLoader:
     def __init__(self):
+        load_dotenv()
         print(f"Loaded config.....")
         self.config=load_config()
     
@@ -19,10 +20,11 @@ class ModelLoader(BaseModel):
     
     def model_post_init(self, __context: Any)-> None:
         self.config=ConfigLoader()
-        
-    class Config:
-        arbitraty_types_allowed=True
-    
+
+    model_config = {
+        'arbitrary_types_allowed': True,
+    }
+
     def load_model(self):
         """
         Load and return the LLM model.

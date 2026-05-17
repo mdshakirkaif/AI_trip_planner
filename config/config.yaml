@@ -1,4 +1,4 @@
 llm:
-  gorq:
-    provider:"gorq"
-    model_name:"deepseek-r1-distill-llama-70b"
+  groq:
+    provider: "groq"
+    model_name: "llama-3.3-70b-versatile"

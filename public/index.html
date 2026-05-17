@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 Travel Planner - AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn">
+                    <span class="icon">➕</span>
+                    New Chat
+                </button>
+            </div>
+            
+            <div class="chat-history">
+                <div class="history-item" data-chat-id="current">
+                    <span class="history-title">Travel Planner</span>
+                    <button class="delete-btn" title="Delete">🗑️</button>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="settings-btn">
+                    <span>⚙️</span>
+                    Settings
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <!-- Chat Header -->
+            <header class="chat-header">
+                <div class="header-title">
+                    <h1>🌍 Travel Planner AI</h1>
+                    <p>Your personal travel planning assistant</p>
+                </div>
+            </header>
+
+            <!-- Messages Area -->
+            <div class="messages-area" id="messagesArea">
+                <div class="welcome-section">
+                    <div class="welcome-icon">🌍</div>
+                    <h2>Welcome to Travel Planner</h2>
+                    <p>Let me help you plan your perfect trip! Ask me to plan a vacation to any destination.</p>
+                    
+                    <div class="quick-prompts">
+                        <button class="prompt-btn" data-prompt="Plan a 5 days trip to Goa with budget breakdown">
+                            📍 Plan a trip to Goa
+                        </button>
+                        <button class="prompt-btn" data-prompt="What are the best places to visit in Japan in summer?">
+                            🗾 Japan Travel Guide
+                        </button>
+                        <button class="prompt-btn" data-prompt="Plan a romantic weekend getaway to Paris">
+                            💕 Paris Weekend
+                        </button>
+                        <button class="prompt-btn" data-prompt="Create a 10 days adventure trip to the Himalayas">
+                            ⛰️ Himalayas Adventure
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-section">
+                <form id="chatForm" class="chat-input-form">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="messageInput" 
+                            placeholder="Ask me to plan a trip... (Press Ctrl+Enter to send)"
+                            rows="1"
+                            class="message-input"
+                        ></textarea>
+                        <button type="submit" class="send-btn" title="Send message">
+                            <span class="send-icon">⬆️</span>
+                        </button>
+                    </div>
+                </form>
+                <p class="input-hint">💡 Tip: Describe your destination, budget, and interests for better travel plans</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loadingIndicator" class="loading-indicator hidden">
+        <div class="spinner"></div>
+        <p>AI is planning your trip...</p>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
